@@ -1,4 +1,4 @@
-const screens=['cover','password','success'];
+const screens=['cover','password','success','gifts'];
 const inputs=[...document.querySelectorAll('.digits input')];
 const error=document.querySelector('#error');
 const submit=document.querySelector('#submit');
@@ -18,3 +18,7 @@ inputs.forEach((input,index)=>{
  input.addEventListener('paste',event=>{event.preventDefault();const digits=event.clipboardData.getData('text').replace(/\D/g,'').slice(0,4-index);[...digits].forEach((digit,i)=>inputs[index+i].value=digit);update();inputs[Math.min(index+digits.length,3)].focus()});
 });
 document.querySelector('#form').addEventListener('submit',event=>{event.preventDefault();if(submit.disabled)return;document.activeElement.blur();if(inputs.map(input=>input.value).join('')==='5916'){reset();show('success');document.querySelector('.coordinates').focus({preventScroll:true})}else{error.showModal();document.querySelector('#dismiss').focus()}});
+
+document.querySelector('#preparations').onclick=()=>{show('gifts');document.querySelector('#gift-title').focus({preventScroll:true})};
+document.querySelector('#gift-back').onclick=()=>{show('success');document.querySelector('#preparations').focus({preventScroll:true})};
+
