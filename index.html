@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#151515"><title>크리스마스 파티 초대장</title><meta name="description" content="당신을 크리스마스 파티에 초대합니다."><meta property="og:type" content="website"><meta property="og:title" content="크리스마스 파티 초대장"><meta property="og:description" content="당신을 초대합니다. 열쇠 구멍을 눌러 초대장을 열어보세요."><meta property="og:image" content="https://rozudhuisler.github.io/christmas-invitation/invitation.png"><meta property="og:url" content="https://rozudhuisler.github.io/christmas-invitation/"><link rel="stylesheet" href="style.css"></head>
+<body>
+<main>
+<section id="cover" aria-label="크리스마스 초대장">
+ <div class="art"><img src="invitation.png" alt="크롬 별과 삼각형 트리, 열쇠 구멍이 있는 테서랙트. 하단에 여러분을 파티에 초대합니다라는 히브리어 문구."><button id="unlock" class="hotspot" aria-label="열쇠 구멍: 비밀번호 입력 화면 열기"></button></div>
+</section>
+<section id="password" class="screen" hidden>
+ <button class="back" id="back" aria-label="초대장으로 돌아가기">←</button>
+ <div class="challenge-group"><p class="challenge" lang="he" dir="rtl">הוכח את ראויותך</p><p class="cipher" dir="ltr">[100 4 100 6 4]</p></div><div class="panel"><h1 class="password-title">PASSWORD</h1>
+ <form id="form"><div class="digits" role="group" aria-label="4자리 비밀번호">
+ <input aria-label="첫 번째 숫자" type="password" inputmode="numeric" pattern="[0-9]" maxlength="1" autocomplete="off" required>
+ <input aria-label="두 번째 숫자" type="password" inputmode="numeric" pattern="[0-9]" maxlength="1" autocomplete="off" required>
+ <input aria-label="세 번째 숫자" type="password" inputmode="numeric" pattern="[0-9]" maxlength="1" autocomplete="off" required>
+ <input aria-label="네 번째 숫자" type="password" inputmode="numeric" pattern="[0-9]" maxlength="1" autocomplete="off" required>
+ </div><button class="confirm" id="submit" aria-label="비밀번호 확인" disabled>→</button></form></div>
+</section>
+<section id="success" class="screen destination" aria-label="초대 장소 좌표" hidden>
+ <button class="back" id="restart" aria-label="초대장으로 돌아가기">←</button>
+ <div class="coordinates" tabindex="-1">
+  <div class="gold-mark" aria-hidden="true">✦</div>
+  <dl><div><dt>Latitude:</dt><dd>35.32479787860649</dd></div><div><dt>Longitude:</dt><dd>128.99407272147218</dd></div></dl>
+ </div>
+ <a class="coordinate-link" href="https://www.findlatlng.org/" target="_blank" rel="noopener noreferrer">https://www.findlatlng.org/</a>
+</section>
+</main>
+<dialog id="error"><h2>다시 입력해주세요.</h2><p>비밀번호가 일치하지 않습니다.<br>초대장을 다시 확인해주세요.</p><button class="confirm" id="dismiss">확인</button></dialog>
+<script src="app.js"></script></body></html>
