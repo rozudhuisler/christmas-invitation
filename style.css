@@ -33,3 +33,11 @@
 
 .preparation-link .preparation-label{font:inherit;color:inherit;margin:0}.engraved-gold-star{display:block;width:31px;height:31px;flex:0 0 31px;filter:drop-shadow(0 -1px 1px #000) drop-shadow(0 1px .4px #b8974533)}.preparation-link{gap:16px}
 
+/* Gift instructions — local v4 review. */
+.gift-screen{padding:80px 24px 42px;align-items:start}
+.gift-content{margin:0 auto;max-width:400px}
+.gift-explanation{max-width:340px;margin:0 auto;color:#fff;font-size:14px;line-height:1.95;word-break:keep-all;overflow-wrap:break-word;text-align:center}
+.gift-explanation p{margin:0 0 20px}.gift-explanation p:last-child{margin-bottom:0}.gift-explanation strong{font-weight:600}
+.gift-arrival{margin:52px auto 0;max-width:350px;color:#fff;font-size:13px;line-height:2;word-break:keep-all}
+.gift-icon{margin-top:32px}
+@media(min-width:600px){.gift-screen{padding-top:90px}.gift-explanation{font-size:15px}.gift-arrival{font-size:14px}}
